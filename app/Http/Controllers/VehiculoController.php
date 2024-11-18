@@ -61,7 +61,7 @@ class VehiculoController extends Controller
         }
 
         $validator = Validator::make($request->all(),  [
-            'nombre_vehiculo'=>'sometimes|string',
+            'nombre_vehiculo'=>'sometimes|unique:vehiculo|string',
             'descripcion'=>'sometimes|string'
             ]);
         if ($validator->fails()) {
