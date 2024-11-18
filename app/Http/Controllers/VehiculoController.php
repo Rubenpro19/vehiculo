@@ -10,7 +10,9 @@ class VehiculoController extends Controller
 {
     public function index(){
         $vehiculo = Vehiculo::all();
-        return response()->json($vehiculo);
+        return response()->json([
+            'Mensaje' => $vehiculo,
+        ]);
     }
 
     public function registro_unico($id){
